@@ -1,0 +1,11 @@
+[general]
+save-after-copy = true
+early-exit = false
+copy-command = "wl-copy"
+
+# [general]
+# # Carpeta donde se guardarán las capturas por defecto
+# save-strip-path = true
+# default-save-directory = "/home/gazzd/Pictures/Screenshots"
+# # Formato de nombre de archivo
+# save-format = "screenshot_%Y%m%d_%H%M%S.png"
