@@ -8,10 +8,18 @@ try {
 
 Clear-Host
 
+function zen {
+    Start-Process "C:\Program Files\Zen Browser\zen.exe"
+}
+
+function make-link ($target, $link) {
+    sudo powershell -c "New-Item -Path '$link' -ItemType SymbolicLink -Value '$target'"
+}
+
 # Force Fastfetch to use YOUR config every time (bypass path confusion)
 if (Get-Command fastfetch -ErrorAction SilentlyContinue) {
     fastfetch -c "$HOME\.config\fastfetch\config.jsonc"
-}  
+}
 
 $Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
 $Env:KOMOREBI_AHK_EXE = "C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe"
