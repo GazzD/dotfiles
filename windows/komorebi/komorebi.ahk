@@ -2,6 +2,7 @@
 #SingleInstance Force
 
 terminal := "wezterm-gui.exe"
+winTerminal := "powershell"
 browser := "zen"
 editor := "code"
 fileManager := "explorer.exe"
@@ -19,7 +20,7 @@ Komorebic(cmd) {
 ; + = Shift key
 
 ; Bind keys to launch applications
-#Enter:: Run(terminal)
+#Enter:: Run(winTerminal)
 #w:: Run(browser, , 'Hide')
 #c:: Run(editor, , 'Hide')
 #e:: Run(fileManager, , 'Hide')
