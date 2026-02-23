@@ -57,7 +57,7 @@ Komorebic(cmd) {
 !Down:: Komorebic("stack down")
 !Up:: Komorebic("stack up")
 !Right:: Komorebic("stack right")
-!;:: Komorebic("unstack")
+!.:: Komorebic("unstack")
 ![:: Komorebic("cycle-stack previous")
 !]:: Komorebic("cycle-stack next")
 
@@ -68,8 +68,8 @@ Komorebic(cmd) {
 !+_:: Komorebic("resize-axis vertical decrease")
 
 ; Manipulate windows
-!t:: Komorebic("toggle-float")
-!f:: Komorebic("toggle-monocle")
+#t:: Komorebic("toggle-float")
+#f:: Komorebic("toggle-monocle")
 
 ; Window manager options
 !+r:: Komorebic("retile")
