@@ -1,1 +1,4 @@
-quickshell/
+quickshell/ # Not really a dotfile, separate repo for it if needed.
+*.log
+.zcompdump*
+.zsh_history
