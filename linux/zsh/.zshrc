@@ -124,6 +124,7 @@ source $ZSH/oh-my-zsh.sh
 #
 alias cat='bat --paging=never'
 alias grep='rg'
+alias ogrep='grep'
 alias find='fd'
 alias top='btm'
 alias htop='btm'
