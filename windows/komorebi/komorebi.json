@@ -48,32 +48,32 @@
     {
       "workspaces": [
         {
-          "name": "I",
+          "name": "Code",
           "layout": "BSP"
         },
         {
-          "name": "II",
-          "layout": "VerticalStack"
+          "name": "Web",
+          "layout": "BSP"
         },
         {
-          "name": "III",
-          "layout": "HorizontalStack"
+          "name": "Aux",
+          "layout": "BSP"
         }
       ]
     },
     {
       "workspaces": [
         {
-          "name": "1",
+          "name": "Web",
           "layout": "BSP"
         },
         {
-          "name": "2",
-          "layout": "VerticalStack"
+          "name": "Mail",
+          "layout": "BSP"
         },
         {
-          "name": "3",
-          "layout": "HorizontalStack"
+          "name": "Chat",
+          "layout": "BSP"
         }
       ]
     }
