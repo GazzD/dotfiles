@@ -145,5 +145,6 @@ eval "$($HOME/.local/bin/mise activate zsh)"
 # Activate zoxide (better cd)
 eval "$(zoxide init zsh)"
 
+fastfetch
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
