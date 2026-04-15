@@ -137,7 +137,10 @@ setopt complete_aliases
 eval "$(starship init zsh)"
 
 # opencode
-export PATH=/home/gazzd/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
+
+# custom scripts
+export PATH=$HOME/.local/bin:$PATH
 
 # Activate mise (version manager tool)
 eval "$($HOME/.local/bin/mise activate zsh)"
