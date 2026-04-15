@@ -1,0 +1,8 @@
+theme = "Catppuccin Mocha"
+
+background-opacity=0.85
+
+keybind = ctrl+shift+up=new_split:up
+keybind = ctrl+shift+down=new_split:down
+keybind = ctrl+shift+left=new_split:left
+keybind = ctrl+shift+right=new_split:right
