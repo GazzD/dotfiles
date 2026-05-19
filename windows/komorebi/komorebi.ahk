@@ -4,7 +4,7 @@
 terminal := "wezterm-gui.exe"
 winTerminal := "powershell"
 browser := "zen"
-editor := "code"
+editor := "zed"
 fileManager := "explorer.exe"
 ; menu := "hyprlauncher" ; aquí luego lo adaptamos
 

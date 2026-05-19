@@ -19,4 +19,6 @@ function make-link ($target, $link) {
 # Force Fastfetch to use YOUR config every time (bypass path confusion)
 if (Get-Command fastfetch -ErrorAction SilentlyContinue) {
     fastfetch -c "$HOME\.config\fastfetch\config.jsonc"
-} 
+}
+
+Invoke-Expression (&starship init powershell)
