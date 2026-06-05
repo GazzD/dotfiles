@@ -1,4 +1,0 @@
-[general]
-save-after-copy = true
-early-exit = false
-copy-command = "wl-copy"

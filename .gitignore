@@ -1,6 +1,9 @@
-quickshell/ # Not really a dotfile, separate repo for it if needed.
+quickshell/
 *.log
 *.log.*
 *.cache
 .zcompdump*
 .zsh_history
+
+# chezmoi-managed paths — do not edit manually
+# (chezmoi add will handle these)

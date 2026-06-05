@@ -1,0 +1,27 @@
+# chezmoi ignore rules
+# https://www.chezmoi.io/reference/special-files/chezmoiignore/
+
+# Repo meta files — never deployed
+README.md
+.editorconfig
+
+# nvim — exclude generated/lock files
+dot_config/nvim/lazy-lock.json
+dot_config/nvim/LICENSE
+dot_config/nvim/README.md
+
+# OS-specific exclusions
+{{ if ne .chezmoi.os "linux" }}
+# Not on Linux — skip Linux-only configs
+dot_config/hypr
+dot_config/uwsm
+dot_config/sunsetr
+dot_config/satty
+dot_config/Thunar
+dot_zshrc
+{{ end }}
+
+{{ if ne .chezmoi.os "windows" }}
+# Not on Windows — skip Windows-only configs
+windows
+{{ end }}

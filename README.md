@@ -1,94 +1,108 @@
-<h1 align="center">⚠️ THE ULTIMATE DOTFILES (WIP) ⚠️</h1>
-<h3 align="center">✨ Arch Linux + Hyprland | Windows 11 Setup ✨</h3>
+<h1 align="center">dotfiles</h1>
+<h3 align="center">Arch Linux + Hyprland | Windows 11</h3>
 
 <p align="center">
-just my personal daily setup dotfiles 👀
+  Personal dotfiles managed with <a href="https://www.chezmoi.io/">chezmoi</a>.
 </p>
 
 ---
 
-## 🖼️ Screenshot
+## Configs tracked
 
-![My Desktop Screenshot](screenshot.png) _I still need to upload one 😅._
+**Linux (Arch + Hyprland)**
 
-### Linux (Arch + Hyprland)
-
-These are the Linux modules currently tracked here:
-
+- `hypr` — Hyprland, hypridle, hyprlock
+- `ghostty` — terminal
 - `fastfetch`
-- `ghostty`
-- `hypr`
-- `illogical-impulse`
-- `nvim`
-- `satty`
-- `starship`
+- `nvim` — LazyVim-based
+- `satty` — screenshot annotation
+- `starship` — shell prompt
 - `sunsetr`
-- `system` (`pkglist.txt` as a reference)
-- `thunar`
+- `Thunar`
 - `uwsm`
 - `zsh`
 
-### Windows (Komorebi + YASB + terminal/editor tooling)
-
-These are the Windows modules currently tracked here:
+**Windows**
 
 - `fastfetch`
-- `komorebi`
-- `powershell`
-- `wezterm`
-- `yasb`
+- `komorebi` — tiling window manager
+- `yasb` — status bar
+- `wezterm` — terminal
+- `powershell` — profile
 
 ## Structure
 
-```text
-.
-├── linux/     # Arch Linux + Hyprland setup
-└── windows/   # Windows configuration
+```
+dotfiles/
+├── .chezmoi.toml.tmpl      # chezmoi config template (per-machine variables)
+├── .chezmoiignore          # OS-specific exclusion rules
+├── .chezmoitemplates/      # reusable Go templates (e.g. monitor layouts)
+├── dot_config/             # maps to ~/.config/
+│   ├── hypr/
+│   ├── ghostty/
+│   ├── fastfetch/
+│   ├── nvim/
+│   ├── uwsm/
+│   ├── satty/
+│   ├── sunsetr/
+│   └── Thunar/
+├── dot_zshrc               # maps to ~/.zshrc
+└── windows/                # Windows configs (applied only on Windows)
+    └── dot_config/
+        ├── fastfetch/
+        ├── komorebi/
+        ├── yasb/
+        ├── wezterm/
+        └── powershell/
 ```
 
-## Installation with GNU Stow
+## Installation
 
-[GNU Stow](https://www.gnu.org/software/stow/) is a symlink farm manager which takes distinct packages of software and/or data located in separate directories on the filesystem, and makes them appear to be installed in the same place.
+### Prerequisites
 
-To easily add this config you may need first to install `stow` and back up any existing config you do not want to overwrite.
-
-
-### Linux
-
-Most Linux packages already follow a structure designed to be linked into `$HOME`.
+Install [chezmoi](https://www.chezmoi.io/install/):
 
 ```bash
-sudo pacman -S stow
-git clone <your-fork-or-repo> dotfiles
-cd dotfiles
+# Arch Linux
+sudo pacman -S chezmoi
 
-stow -d linux -t "$HOME" fastfetch ghostty hypr illogical-impulse nvim satty starship sunsetr thunar zsh
-mkdir -p "$HOME/.config/uwsm"
-stow -d linux -t "$HOME/.config/uwsm" uwsm
+# Windows (winget)
+winget install twpayne.chezmoi
 ```
 
-`linux/system/` is not installed with stow: it only keeps a reference list of installed packages.
-
-### Windows
-
-On Windows there is no single target root for everything, so it is better to use **stow per package** and point it at the real directory each app uses.
+### Apply dotfiles
 
 ```bash
-stow -d windows -t "$KOMOREBI_CONFIG_HOME" komorebi
-stow -d windows -t "$HOME/.config/yasb" yasb
-stow -d windows -t "$HOME/.config/fastfetch" fastfetch
-stow -d windows -t "$HOME/.config/wezterm" wezterm
+chezmoi init --apply https://github.com/GazzD/dotfiles.git
 ```
 
-`windows/powershell/profile.ps1` is still better copied or adapted manually to your `$PROFILE`, because the final file name depends on how PowerShell is configured on your system.
+chezmoi will prompt for any machine-specific variables (email, monitor layout) on first run.
 
-## Platform documentation
+### Add a new config file
 
-- 🐧 [linux/README.md](linux/README.md)
-- 🪟 [windows/README.md](windows/README.md)
+```bash
+chezmoi add ~/.config/someapp
+chezmoi cd          # opens source dir in $EDITOR
+chezmoi apply       # deploy changes to $HOME
+```
+
+### Edit an existing file
+
+```bash
+chezmoi edit ~/.config/someapp/config
+chezmoi apply
+```
+
+### Sync changes back to source
+
+```bash
+chezmoi re-add      # pull any manual edits back into source dir
+chezmoi diff        # preview what chezmoi apply would change
+```
 
 ## Notes
 
-- This is a personal setup, not a one-command installer.
-- Some paths, monitors, binaries, and apps are specific to my machine.
-- The idea is to use these configs as a base and adapt them to your environment.
+- Machine-specific settings (monitor layout, etc.) live in `.chezmoi.toml.tmpl` and are stored per-machine in `~/.config/chezmoi/chezmoi.toml` — not committed.
+- `lazy-lock.json` is intentionally excluded; each machine resolves the latest plugin versions.
+- Windows configs are deployed to `~/.config/` (`C:\Users\<user>\.config\`). Apps that require a different path need a manual symlink from their expected location to `~/.config/<app>`.
+- The old GNU Stow setup is preserved in the `archive/stow-era` branch.
