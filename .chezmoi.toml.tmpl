@@ -4,7 +4,7 @@
 
 {{- if eq .chezmoi.os "linux" }}
   # Monitor layout identifier for this machine.
-  # Used in dot_config/hypr/monitors.conf.tmpl
-  # Examples: "single", "dual-horizontal", "laptop"
-  monitor_layout = {{ promptStringOnce . "monitor_layout" "Monitor layout (single/dual-horizontal/laptop)" "single" | quote }}
+  # Used in dot_config/hypr/modules/monitors.lua.tmpl
+  # Options: "dual" (DP-1 left + HDMI-A-1 right), "single", "laptop"
+  monitor_layout = {{ promptStringOnce . "monitor_layout" "Monitor layout (dual/single/laptop)" "dual" | quote }}
 {{- end }}
