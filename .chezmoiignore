@@ -5,19 +5,34 @@
 README.md
 .editorconfig
 
+# Placeholder files (removed once real content is added)
+**/.gitkeep
+
 # nvim — exclude generated/lock files
 dot_config/nvim/lazy-lock.json
 dot_config/nvim/LICENSE
 dot_config/nvim/README.md
+
+# Binary/media assets — no value in tracking these
+dot_config/fastfetch/image.png
+dot_config/swaync/notification.ogg
 
 # OS-specific exclusions
 {{ if ne .chezmoi.os "linux" }}
 # Not on Linux — skip Linux-only configs
 dot_config/hypr
 dot_config/uwsm
-dot_config/sunsetr
 dot_config/satty
+dot_config/sunsetr
 dot_config/Thunar
+dot_config/private_Thunar
+dot_config/waybar
+dot_config/swaync
+dot_config/walker
+dot_config/matugen
+dot_config/fish
+dot_config/lazygit
+dot_config/starship.toml
 dot_zshrc
 {{ end }}
 

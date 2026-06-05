@@ -14,12 +14,15 @@
 - `hypr` — Hyprland, hypridle, hyprlock
 - `ghostty` — terminal
 - `fastfetch`
-- `nvim` — LazyVim-based
-- `satty` — screenshot annotation
+- `waybar` — status bar
+- `swaync` — notification center
+- `walker` — app launcher
+- `matugen` — color generation
+- `fish` — shell
+- `lazygit`
 - `starship` — shell prompt
-- `sunsetr`
-- `Thunar`
-- `uwsm`
+- `zed` — editor
+- `Thunar` — file manager
 - `zsh`
 
 **Windows**
@@ -41,10 +44,14 @@ dotfiles/
 │   ├── hypr/
 │   ├── ghostty/
 │   ├── fastfetch/
-│   ├── nvim/
-│   ├── uwsm/
-│   ├── satty/
-│   ├── sunsetr/
+│   ├── waybar/
+│   ├── swaync/
+│   ├── walker/
+│   ├── matugen/
+│   ├── fish/
+│   ├── lazygit/
+│   ├── starship.toml
+│   ├── zed/
 │   └── Thunar/
 ├── dot_zshrc               # maps to ~/.zshrc
 └── windows/                # Windows configs (applied only on Windows)

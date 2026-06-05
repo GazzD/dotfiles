@@ -1,0 +1,180 @@
+/* ================================================
+   WALKER - CUSTOM THEME
+   ================================================
+   Paleta de colores — cambia solo estos valores
+   para recolorear todo el launcher de una vez.
+   ================================================ */
+
+@define-color bg          #1e1e2e; /* fondo principal de la ventana       */
+@define-color bg_light    #313244; /* fondo de la barra de búsqueda       */
+@define-color accent      #cba6f7; /* color de acento (borde, selección)  */
+@define-color fg          #cdd6f4; /* texto principal                     */
+@define-color fg_dim      #6c7086; /* texto secundario / subtítulos       */
+@define-color selected_bg #45475a; /* fondo del item seleccionado         */
+@define-color selected_fg #cdd6f4; /* texto del item seleccionado         */
+@define-color error_bg    #f38ba8; /* fondo del mensaje de error          */
+@define-color error_fg    #1e1e2e; /* texto del mensaje de error          */
+
+/* ================================================ */
+
+* {
+    all: unset;
+}
+
+.normal-icons {
+    -gtk-icon-size: 16px;
+}
+
+.large-icons {
+    -gtk-icon-size: 32px;
+}
+
+scrollbar {
+    opacity: 0;
+}
+
+/* --- Contenedor principal --- */
+.box-wrapper {
+    background: @bg;
+    border: 1px solid alpha(@accent, 0.4);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.45),
+        0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Barra de búsqueda --- */
+.search-container {
+    background: @bg_light;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.input {
+    background: transparent;
+    color: @fg;
+    padding: 10px 14px;
+    caret-color: @accent;
+}
+
+.input placeholder {
+    color: @fg;
+    opacity: 0.35;
+}
+
+/* --- Lista de resultados --- */
+.list {
+    color: @fg;
+}
+
+.item-box {
+    border-radius: 8px;
+    padding: 8px 10px;
+    color: @fg;
+}
+
+child:hover .item-box,
+child:selected .item-box,
+row:selected .item-box {
+    background: @selected_bg;
+    color: @selected_fg;
+}
+
+.item-image,
+.item-image-text {
+    margin-right: 10px;
+}
+
+.item-image-text {
+    font-size: 28px;
+}
+
+.item-subtext {
+    font-size: 12px;
+    color: @fg_dim;
+}
+
+/* --- Quick activation buttons --- */
+.item-quick-activation {
+    background: alpha(@accent, 0.15);
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* --- Preview panel --- */
+.preview-box,
+.elephant-hint,
+.placeholder {
+    color: @fg_dim;
+}
+
+.preview {
+    border: 1px solid alpha(@accent, 0.2);
+    border-radius: 10px;
+    color: @fg;
+}
+
+.preview .large-icons {
+    -gtk-icon-size: 64px;
+}
+
+/* --- Providers específicos --- */
+.calc .item-text {
+    font-size: 24px;
+}
+
+.symbols .item-image {
+    font-size: 24px;
+}
+
+.todo.done .item-text-box {
+    opacity: 0.25;
+}
+
+.todo.urgent {
+    font-size: 24px;
+}
+
+.todo.active {
+    font-weight: bold;
+}
+
+.bluetooth.disconnected {
+    opacity: 0.5;
+}
+
+/* --- Keybinds bar (pie de la ventana) --- */
+.keybinds {
+    padding-top: 10px;
+    border-top: 1px solid alpha(@accent, 0.15);
+    font-size: 12px;
+    color: @fg_dim;
+}
+
+.keybind-button {
+    opacity: 0.5;
+}
+
+.keybind-button:hover {
+    opacity: 0.75;
+}
+
+.keybind-bind {
+    text-transform: lowercase;
+    opacity: 0.4;
+}
+
+.keybind-label {
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: 1px solid @fg_dim;
+}
+
+/* --- Error --- */
+.error {
+    padding: 10px;
+    background: @error_bg;
+    color: @error_fg;
+}

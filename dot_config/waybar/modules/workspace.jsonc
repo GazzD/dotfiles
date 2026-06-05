@@ -1,0 +1,63 @@
+{
+  "hyprland/workspaces": {
+    "format": "{icon} {windows}",
+    "on-scroll-up": "hyprctl dispatch split-cycleworkspaces -1",
+    "on-scroll-down": "hyprctl dispatch split-cycleworkspaces +1",
+    "all-outputs": false, // recommended:
+    //"on-click-window": "/home/gazzd/.config/waybar/scripts/focus-workspace.sh {address} {button}",
+    "show-special": true,
+    // "active-only": true,
+    // "all-outputs": false,
+    // "persistent-workspaces": {},
+    "window-rewrite-default": "󰊠",
+    "window-rewrite": {
+      // --- Work ---
+      "kitty": "󰆍",
+      "onlyoffice": "󰏆",
+      "firefox": "",
+      "zen": "󰖟",
+      "code": "󰨞",
+      "zed": "",
+      "vial": "",
+      "azahar": "",
+      "obsidian": "󰹕",
+      "mousepad": "󱓧",
+      // --- Apps ---
+      "discord": "",
+      "Whatsapp": "󰖣",
+      "telegram": "",
+      "spotify": "",
+      "org.kde.kdeconnect.app": "󰦉",
+      "org.qbittorrent.qBittorrent": "󰘿",
+      // --- Graphics & Visual ---
+      "xdg-desktop-portal-gtk": "",
+      "thunar": "",
+      "yazi": "󰇥",
+      "imv": "󰄄",
+      "swappy": "󰄄",
+      "org.gnome.FileRoller": "",
+      "vlc": "󰕼",
+      "mpv": "󰕼",
+      // --- System ---
+      "blueman-manager": "",
+      "pavucontrol": "󱕂",
+      "nm-connection-editor": "󰐻",
+      // --- Tool ---
+      "nwg-look": "󰒓",
+      "qt5ct": "󰒓",
+      "qt6ct": "󰒓",
+      "designer": "󰒓",
+      "linguist": "󰒓",
+      "assistant": "󰒓",
+      "pixeltool": "󰒓",
+      "qdbusviewer": "󰒓",
+    },
+    "format-icons": {
+      "active": "󰮯",
+      "special": "󱁂",
+      "default": "󰊠",
+      "urgent": "󰧵",
+      "empty": "",
+    },
+  },
+}
