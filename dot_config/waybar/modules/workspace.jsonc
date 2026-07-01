@@ -24,11 +24,11 @@
       "mousepad": "󱓧",
       // --- Apps ---
       "discord": "",
-      "Whatsapp": "󰖣",
+      "class<chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default>": "󰖣",
       "telegram": "",
       "spotify": "",
-      "org.kde.kdeconnect.app": "󰦉",
-      "org.qbittorrent.qBittorrent": "󰘿",
+      // "org.kde.kdeconnect.app": "󰦉",     // not installed - verify class with hyprctl clients
+      // "org.qbittorrent.qBittorrent": "󰘿", // not installed - verify class with hyprctl clients
       // --- Graphics & Visual ---
       "xdg-desktop-portal-gtk": "",
       "thunar": "",

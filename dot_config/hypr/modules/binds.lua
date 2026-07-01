@@ -11,7 +11,9 @@ local appLauncherRofi   = "~/.config/rofi/launchers/type-4/launcher.sh" --"rofi 
 -- local walker            = app .. "walker --width 644 --maxheight 300 --minheight 300"
 local walker            = "launch-walker"
 local appLauncherWalker = walker
-local clipboardHistory  = walker .. " -m clipboard -N -H"
+-- local clipboardHistory  = walker .. " -m clipboard -N -H"
+local clipboardHistory  = "launch-or-focus-tui clipse"
+
 local systemMenu        = walker .. " -m menus:system"
 -- local wallpaperPicker   = walker ..
 --     " -t wallpaper-picker -m menus:wallpapers --width 900 --maxheight 600 --minheight 500"
@@ -37,7 +39,7 @@ hl.bind(mainMod .. " + M",
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 -- hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(appLauncherRofi))  -- reemplazado por system menu
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(appLauncherWalker))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboardHistory))
@@ -80,8 +82,8 @@ for i = 1, smw.get_amount_of_workspaces() do
     if n == "10" then n = "0" end -- Optional if you configured 10 workspaces: bind workspace 10 to SUPER + 0
     -- Switch to the Nth workspace on the currently focused monitor.
     hl.bind(mainMod .. " +" .. n, smw.workspace(n))
-    -- Move the active window to the Nth workspace on the currently focused monitor silently (no focus change).
-    hl.bind(mainMod .. " + SHIFT +" .. n, smw.move_to_workspace_silent(n))
+    -- Move the active window to the Nth workspace on the currently focused monitor.
+    hl.bind(mainMod .. " + SHIFT +" .. n, smw.move_to_workspace(n))
 end
 -- for i = 1, 10 do
 --     local key = i == 10 and "0" or tostring(i)

@@ -7,22 +7,37 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "vim_mode": false,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "cli_default_open_behavior": "existing_window",
+  "vim_mode": true,
   "session": {
     "trust_all_worktrees": true
   },
   "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "model": "opencode/big-pickle"
+      },
+      "type": "registry"
+    },
     "github-copilot-cli": {
       "type": "registry"
     }
   },
   "base_keymap": "JetBrains",
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "Catppuccin Mocha",
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark",
+    "dark": "Tokyo Night",
   },
 }

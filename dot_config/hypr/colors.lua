@@ -1,6 +1,7 @@
 return {
-    image = "/home/gazzd/Pictures/Wallpapers/bg005.jpeg",
+    -- image = "/home/gazzd/Pictures/Wallpapers/bg005.jpeg",
 
+    image = "/home/gazzd/Pictures/Wallpapers/current",
     background = "0xff131318",
 
     error = "0xffffb4ab",
