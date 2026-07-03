@@ -16,7 +16,7 @@
     "button": false
   },
   "cli_default_open_behavior": "existing_window",
-  "vim_mode": true,
+  "vim_mode": false,
   "session": {
     "trust_all_worktrees": true
   },

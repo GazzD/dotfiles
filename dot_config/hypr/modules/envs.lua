@@ -3,7 +3,7 @@
 -------------------------------
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
-
+hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("XCURSOR_SIZE", "24")
 
 -- Fcitx5 input method (fixes dead keys / accents in terminals under Wayland)
@@ -13,6 +13,7 @@ hl.env("XMODIFIERS", "@im=fcitx")
 hl.env("SDL_IM_MODULE", "fcitx")
 hl.env("GLFW_IM_MODULE", "ibus")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("APP2UNIT_SLICES", "a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice")
 
 -- -- XDG

@@ -18,4 +18,6 @@ hl.on("hyprland.start", function()
     -- hl.exec_cmd("app2unit -- matuwall --daemon")
     hl.exec_cmd("hyprpm reload -n")
     hl.exec_cmd("fcitx5 -d")
+    hl.exec_cmd("qs -c overview") -- Workspace overview quickshell 
+    
 end)

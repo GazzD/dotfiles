@@ -39,7 +39,7 @@ hl.bind(mainMod .. " + M",
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock-wall"))
 -- hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(appLauncherRofi))  -- reemplazado por system menu
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(appLauncherWalker))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboardHistory))
@@ -126,6 +126,8 @@ hl.bind(mainMod .. "+ PERIOD", hl.dsp.exec_cmd("launch-walker -m symbols"))
 
 -- Screenshot
 hl.bind(mainMod .. "+ PRINT", hl.dsp.exec_cmd(screenshot))
+
+hl.bind("SUPER + TAB", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
 
 -- Capturar un área seleccionada (equivalente a Flameshot gui)
 -- # bind = , Print, exec, grim -g "$(slurp)" - |   --filename -
