@@ -4,48 +4,99 @@
 #distro-group {
   margin: 4px 5px;
   background-color: @surface_container;
-  border-radius: 20px;
+  border-radius: 4px;
+  border: 1px solid @primary;
+  box-shadow: 0 0 10px @glow_blue;
   color: @primary;
+  transition: all 0.3s ease;
+}
+
+#distro-group:hover {
+  box-shadow: 0 0 15px @glow_blue;
+  border-color: @primary_bright;
 }
 
 #custom-distro {
   color: @primary;
   padding: 6px 15px 6px 10px;
+  text-shadow: 0 0 8px @glow_blue;
 }
 
 #custom-terminal {
-  color: #a6e3a1;
+  color: @success;
   padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_green;
+  transition: all 0.2s ease;
+}
+
+#custom-terminal:hover {
+  text-shadow: 0 0 12px @glow_green;
 }
 
 #custom-code {
-  color: #89b4fa;
+  color: @primary_bright;
   padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_cyan;
+  transition: all 0.2s ease;
+}
+
+#custom-code:hover {
+  text-shadow: 0 0 12px @glow_cyan;
 }
 
 #custom-office {
-  color: #ff6f4c;
+  color: @error;
   padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_red;
+  transition: all 0.2s ease;
+}
+
+#custom-office:hover {
+  text-shadow: 0 0 12px @glow_red;
 }
 
 #custom-obsidian {
-  color: #cba6f7;
+  color: @secondary;
   padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_purple;
+  transition: all 0.2s ease;
+}
+
+#custom-obsidian:hover {
+  text-shadow: 0 0 12px @glow_purple;
 }
 
 #custom-files {
-  color: #f9e2af;
+  color: @warning;
   padding: 0px 10px 0px 8px;
+  text-shadow: 0 0 8px @glow_yellow;
+  transition: all 0.2s ease;
+}
+
+#custom-files:hover {
+  text-shadow: 0 0 12px @glow_yellow;
 }
 
 #custom-spotify {
-  color: #1db954;
+  color: @success;
   padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_green;
+  transition: all 0.2s ease;
+}
+
+#custom-spotify:hover {
+  text-shadow: 0 0 12px @glow_green;
 }
 
 #custom-browser {
-  color: #fab387;
+  color: @warning;
   padding: 0px 15px 0px 10px;
+  text-shadow: 0 0 8px @glow_yellow;
+  transition: all 0.2s ease;
+}
+
+#custom-browser:hover {
+  text-shadow: 0 0 12px @glow_yellow;
 }
 
 #power-profiles-daemon,
@@ -53,8 +104,17 @@
   margin: 4px 5px;
   padding: 6px 15px 6px 10px;
   background-color: @surface_container;
-  border-radius: 20px;
+  border-radius: 4px;
+  border: 1px solid @secondary;
+  box-shadow: 0 0 8px @glow_purple;
   color: @secondary_fixed_dim;
+  transition: all 0.3s ease;
+}
+
+#power-profiles-daemon:hover,
+#idle_inhibitor:hover {
+  box-shadow: 0 0 12px @glow_purple;
+  border-color: @secondary;
 }
 
 /*======= MODULE CAPSUL =======*/
@@ -65,8 +125,19 @@
   margin: 4px 5px;
   padding: 6px 6px;
   background-color: @surface_container;
-  border-radius: 20px;
+  border-radius: 4px;
+  border: 1px solid @tertiary;
+  box-shadow: 0 0 8px @glow_cyan;
   color: @secondary_fixed_dim;
+  transition: all 0.3s ease;
+}
+
+#audio:hover,
+#connections:hover,
+#system:hover,
+#storage:hover {
+  box-shadow: 0 0 12px @glow_cyan;
+  border-color: @tertiary_fixed;
 }
 
 #disk,
@@ -76,6 +147,25 @@
 #bluetooth {
   margin-right: 2px;
   padding: 0 8px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 9pt;
+}
+
+#cpu {
+  color: @primary;
+}
+
+#temperature {
+  color: @warning;
+}
+
+#memory {
+  color: @tertiary;
+}
+
+#disk {
+  color: @secondary;
 }
 
 #network {
@@ -91,12 +181,20 @@
 #tray-group {
   margin: 4px 5px;
   background-color: @surface_container;
-  border-radius: 20px;
+  border-radius: 4px;
+  border: 1px solid @primary;
+  box-shadow: 0 0 8px @glow_blue;
+  transition: all 0.3s ease;
+}
+
+#tray-group:hover {
+  box-shadow: 0 0 12px @glow_blue;
 }
 
 #custom-tray-arrow {
   padding: 6px 14px 6px 10px;
   color: @primary;
+  text-shadow: 0 0 8px @glow_blue;
 }
 
 #tray {
@@ -107,4 +205,59 @@
 #tray>.active,
 #tray>.needs-attention {
   -gtk-icon-effect: none;
+}
+
+/*======= TUI EXTRAS (optional modules) =======*/
+#tui-extras {
+  margin: 4px 5px;
+  background-color: @surface_container;
+  border-radius: 4px;
+  border: 1px solid @secondary;
+  box-shadow: 0 0 8px @glow_purple;
+  transition: all 0.3s ease;
+}
+
+#tui-extras:hover {
+  box-shadow: 0 0 12px @glow_purple;
+}
+
+#custom-uptime,
+#custom-git,
+#custom-updates {
+  margin: 0;
+  padding: 6px 12px;
+  color: @on_surface;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 9pt;
+  transition: all 0.3s ease;
+}
+
+#custom-uptime {
+  color: @secondary;
+  text-shadow: 0 0 6px @glow_purple;
+}
+
+#custom-git {
+  color: @warning;
+  text-shadow: 0 0 6px @glow_yellow;
+}
+
+#custom-updates {
+  color: @primary;
+  text-shadow: 0 0 6px @glow_blue;
+}
+
+#custom-uptime:hover,
+#custom-git:hover,
+#custom-updates:hover {
+  text-shadow: 0 0 10px @glow_cyan;
+}
+
+#custom-git:hover {
+  text-shadow: 0 0 10px @glow_yellow;
+}
+
+#custom-updates:hover {
+  text-shadow: 0 0 10px @glow_blue;
 }

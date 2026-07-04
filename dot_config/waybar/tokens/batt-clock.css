@@ -4,14 +4,30 @@
   margin: 4px 5px;
   padding: 6px 16px;
   background-color: @surface_container;
-  border-radius: 20px;
+  border-radius: 4px;
+  border: 1px solid @tertiary;
+  box-shadow: 0 0 8px @glow_cyan;
   color: @secondary_fixed_dim;
+  transition: all 0.3s ease;
+}
+
+#battery:hover {
+  box-shadow: 0 0 12px @glow_cyan;
 }
 
 #clock {
   margin: 4px 5px;
   padding: 6px 10px 6px 16px;
   background-color: @surface_container;
-  border-radius: 20px;
+  border-radius: 4px;
+  border: 1px solid @primary;
+  box-shadow: 0 0 8px @glow_blue;
   color: @secondary_fixed_dim;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#clock:hover {
+  box-shadow: 0 0 12px @glow_blue;
+  color: @primary;
 }

@@ -22,7 +22,7 @@
   },
   "group/system": {
     "orientation": "horizontal",
-    "modules": ["temperature", "cpu", "hyprland/window"],
+    "modules": ["custom/uptime"],
   },
   "group/audio": {
     "orientation": "horizontal",
@@ -47,5 +47,13 @@
       "transition-left-to-right": false,
     },
     "modules": ["custom/tray-arrow", "tray"],
+  },
+  "group/tui-extras": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true,
+    },
+    "modules": ["custom/uptime", "custom/updates", "custom/git", "custom/reload-waybar"],
   },
 }

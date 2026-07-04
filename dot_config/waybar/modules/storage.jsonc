@@ -1,20 +1,22 @@
 {
   "disk": {
-    "tooltip": false,
+    "tooltip": true,
     "interval": 3600,
     "path": "/",
-    "format": "󱙋",
-    "format-alt": "󱙋 <span size='11pt'>{used}</span>",
+    "format": "[DSK {percentage_used:02}%]",
+    "format-alt": "[DSK {used}/{total}]",
+    "tooltip-format": "Used: {used} / {total}\nFree: {free} ({percentage_free}%)",
     "states": {
       "warning": 80,
       "critical": 90
     }
   },
   "memory": {
-    "tooltip": false,
+    "tooltip": true,
     "interval": 15,
-    "format": "󰍛",
-    "format-alt": "󰍛 <span size='11pt'>{used}</span>",
+    "format": "[MEM {percentage:02}%]",
+    "format-alt": "[MEM {used:0.1f}G/{total:0.1f}G]",
+    "tooltip-format": "RAM: {used:0.1f}GiB / {total:0.1f}GiB\nSwap: {swapUsed:0.1f}GiB / {swapTotal:0.1f}GiB",
     "states": {
       "warning": 75,
       "critical": 85

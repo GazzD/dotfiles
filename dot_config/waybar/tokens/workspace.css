@@ -4,7 +4,9 @@
   margin: 4px 5px;
   padding: 6px 6px;
   background-color: @surface_container;
-  border-radius: 20px;
+  border-radius: 4px;
+  border: 1px solid @primary;
+  box-shadow: 0 0 10px @glow_blue;
 }
 
 #workspaces button {
@@ -12,39 +14,71 @@
   padding: 0 4px;
   margin: 0 2px;
   background: transparent;
-  border-radius: 16px;
+  border-radius: 3px;
+  border: 1px solid @outline_variant;
   color: @tertiary;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 #workspaces button.active {
   padding: 0 12px;
   margin: 0 2px;
-  background-color: @primary;
-  color: @on_primary;
+  background-color: transparent;
+  border: 1px solid @primary;
+  color: @primary;
+  box-shadow: 0 0 10px @glow_blue, inset 0 0 10px @glow_blue;
+  text-shadow: 0 0 8px @glow_blue;
 }
 
 #workspaces button.special {
   color: @tertiary_fixed;
+  border-color: @tertiary;
+  box-shadow: 0 0 6px @glow_cyan;
+  text-shadow: 0 0 6px @glow_cyan;
 }
 
 #workspaces button:hover {
   background-color: @surface_container_highest;
+  border-color: @primary;
   color: @primary;
+  box-shadow: 0 0 8px @glow_blue;
 }
 
 #workspaces button.active:hover {
-  background-color: @primary;
-  color: @on_primary;
+  background-color: transparent;
+  border-color: @primary_bright;
+  color: @primary_bright;
+  box-shadow: 0 0 12px @glow_blue, inset 0 0 12px @glow_blue;
 }
 
 #workspaces button.empty {
   color: @outline_variant;
+  border-color: @outline_variant;
+  opacity: 0.5;
 }
 
 #workspaces button.urgent {
-  color: @error_container;
+  color: @error;
+  border-color: @error;
+  box-shadow: 0 0 10px rgba(247, 118, 142, 0.4);
+  text-shadow: 0 0 8px rgba(247, 118, 142, 0.4);
+  /* animation: urgent-blink 1s ease-in-out infinite; */
 }
+
+/* Animation disabled temporarily due to GTK CSS parser issues
+@keyframes urgent-blink {
+  0%, 100% { 
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(247, 118, 142, 0.4);
+  }
+  50% { 
+    opacity: 0.6;
+    box-shadow: 0 0 4px rgba(247, 118, 142, 0.4);
+  }
+}
+*/
 
 #workspaces button label:first-child {
   margin-right: 8px;

@@ -4,26 +4,30 @@
   margin: 4px 5px;
   padding: 0 2px;
   background-color: transparent;
-  border-radius: 20px;
+  border-radius: 4px;
 }
 
 #pulseaudio-slider trough {
   min-height: 10px;
   min-width: 80px;
-  border-radius: 10px;
-  background-color: @outline_variant;
+  border-radius: 2px;
+  background-color: @surface_container_high;
+  border: 1px solid @outline_variant;
 }
 
 #pulseaudio-slider highlight {
   min-height: 10px;
-  border-radius: 10px;
-  background-color: @secondary_fixed_dim;
+  border-radius: 2px;
+  background-color: @primary;
+  box-shadow: 0 0 8px @glow_blue;
 }
 
 #pulseaudio-slider slider {
-  min-height: 12px;
-  min-width: 12px;
-  margin: -2px 0;
-  border-radius: 100%;
-  background-color: @primary;
+  min-height: 14px;
+  min-width: 14px;
+  margin: -3px 0;
+  border-radius: 2px;
+  background-color: @primary_bright;
+  border: 1px solid @primary;
+  box-shadow: 0 0 6px @glow_blue;
 }
