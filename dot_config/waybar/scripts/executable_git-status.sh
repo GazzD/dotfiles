@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Git status module for Waybar (TUI style)
-
+cd ~/Projects/dotfiles
 if ! git rev-parse --git-dir > /dev/null 2>&1; then
     # Not in a git repo - show indicator
     echo "[GIT -]"

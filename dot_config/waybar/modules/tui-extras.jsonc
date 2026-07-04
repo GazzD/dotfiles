@@ -2,9 +2,10 @@
   "custom/uptime": {
     "exec": "uptime -p | sed 's/up //g' | sed 's/ hours*/h/g' | sed 's/ minutes*/m/g' | sed 's/ days*/d/g' | sed 's/, / /g'",
     "interval": 60,
-    "format": "[⏱ {}]",
+    "on-click": "launch-or-focus-tui btop",
+    "format": "[󱄄 {}]",
     "tooltip": true,
-    "tooltip-format": "System Uptime"
+    "tooltip-format": "System Uptime",
   },
   "custom/git": {
     "exec": "~/.config/waybar/scripts/git-status.sh",
@@ -13,7 +14,7 @@
     "tooltip": true,
     "tooltip-format": "Dotfiles git repository status",
     "on-click": "launch-or-focus-tui lazygit -p ~/Projects/dotfiles",
-    "return-type": "string"
+    "return-type": "string",
   },
   "custom/updates": {
     "exec": "~/.config/waybar/scripts/updates.sh",
@@ -22,16 +23,16 @@
     "tooltip": true,
     "tooltip-format": "Click to update system",
     "on-click": "alacritty -e sh -c 'paru -Syu || yay -Syu || sudo pacman -Syu; echo \"\nDone! Press enter to exit...\"; read'",
-    "return-type": "string"
+    "return-type": "string",
   },
   "custom/reload-waybar": {
-    "exec": "echo '♻'",
+    "exec": "echo '󰑐'",
     "interval": 86400,
     "format": "{}",
     "tooltip": true,
     "tooltip-format": "Click to reload Waybar",
     "on-click": "pkill waybar && waybar &",
-    "return-type": "string"
+    "return-type": "string",
   },
   "memory": {
     "interval": 10,
@@ -41,8 +42,8 @@
     "tooltip-format": "RAM: {used:0.1f}GiB / {total:0.1f}GiB\nSwap: {swapUsed:0.1f}GiB / {swapTotal:0.1f}GiB",
     "states": {
       "warning": 70,
-      "critical": 90
-    }
+      "critical": 90,
+    },
   },
   "disk": {
     "interval": 30,
@@ -53,7 +54,7 @@
     "tooltip-format": "Used: {used} / {total}\nFree: {free} ({percentage_free}%)",
     "states": {
       "warning": 70,
-      "critical": 90
-    }
-  }
+      "critical": 90,
+    },
+  },
 }

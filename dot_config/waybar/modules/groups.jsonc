@@ -22,7 +22,7 @@
   },
   "group/system": {
     "orientation": "horizontal",
-    "modules": ["custom/uptime"],
+    "modules": ["hyprland/window"],
   },
   "group/audio": {
     "orientation": "horizontal",
@@ -54,6 +54,11 @@
       "transition-duration": 500,
       "transition-left-to-right": true,
     },
-    "modules": ["custom/uptime", "custom/updates", "custom/git", "custom/reload-waybar"],
+    "modules": [
+      "custom/uptime",
+      "custom/updates",
+      "custom/git",
+      "custom/reload-waybar",
+    ],
   },
 }

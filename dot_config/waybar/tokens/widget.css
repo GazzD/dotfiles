@@ -223,34 +223,46 @@
 
 #custom-uptime,
 #custom-git,
-#custom-updates {
+#custom-updates,
+#custom-reload-waybar {
   margin: 0;
   padding: 6px 12px;
   color: @on_surface;
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
-  font-size: 9pt;
+  font-size: 11pt;
   transition: all 0.3s ease;
 }
 
 #custom-uptime {
   color: @secondary;
   text-shadow: 0 0 6px @glow_purple;
+  font-size: 9pt;
 }
 
 #custom-git {
   color: @warning;
   text-shadow: 0 0 6px @glow_yellow;
+  font-size: 9pt;
 }
 
 #custom-updates {
   color: @primary;
   text-shadow: 0 0 6px @glow_blue;
+  font-size: 9pt;
+}
+
+#custom-reload-waybar {
+  color: @primary_bright;
+  text-shadow: 0 0 6px @glow_cyan;
+  font-size: 12pt;
+  padding: 4px 14px;
 }
 
 #custom-uptime:hover,
 #custom-git:hover,
-#custom-updates:hover {
+#custom-updates:hover,
+#custom-reload-waybar:hover {
   text-shadow: 0 0 10px @glow_cyan;
 }
 
@@ -260,4 +272,8 @@
 
 #custom-updates:hover {
   text-shadow: 0 0 10px @glow_blue;
+}
+
+#custom-reload-waybar:hover {
+  text-shadow: 0 0 10px @glow_cyan;
 }
