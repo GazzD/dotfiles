@@ -12,13 +12,15 @@
         ""
       ]
     },
-    "on-click": "pavucontrol",
+    // "on-click": "pavucontrol",
+    "on-click": "launch-or-focus-tui wiremix --tab output",
     "tooltip-format": "Output: {volume}%"
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
     "format-source": "",
-    "format-source-muted": ""
+    "format-source-muted": "",
+    "on-click": "launch-or-focus-tui wiremix --tab input",
   },
   "pulseaudio/slider": {
     "min": 0,
