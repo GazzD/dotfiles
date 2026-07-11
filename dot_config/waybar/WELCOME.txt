@@ -1,0 +1,132 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║   ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗               ║
+║   ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗              ║
+║   ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝              ║
+║   ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗              ║
+║   ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║              ║
+║    ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝              ║
+║                                                                      ║
+║                TUI RETRO HACKER THEME                                ║
+║           TokyoNight Storm × Dracula Edition                         ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  🚀 QUICK START                                                     │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  1. Reload Waybar:                                                  │
+│     $ killall -SIGUSR2 waybar                                       │
+│                                                                     │
+│  2. Switch themes:                                                  │
+│     $ ~/.config/waybar/scripts/executable_waybar-theme.sh dracula   │
+│                                                                     │
+│  3. Preview both themes:                                            │
+│     $ ~/.config/waybar/scripts/executable_preview-themes.sh         │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  ✨ FEATURES                                                        │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  ╭──╮  Subtle rounded borders (4px)                                │
+│  │██│  Glow effects on all modules                                 │
+│  ╰──╯  Hover animations                                            │
+│                                                                     │
+│  [CPU 45%]  TUI-style bracketed format                             │
+│  [MEM 62%]  Alt-click for detailed view                            │
+│  [DSK 78%]  Tooltips with full info                                │
+│                                                                     │
+│  ◯ ◯ ◉ ◯ ◯  Inner glow on active workspace                         │
+│             Urgent workspace blink animation                        │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  🎨 THEMES                                                          │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  TokyoNight Storm (default)                                         │
+│  ┌──────┬──────┬──────┬──────┬──────┐                             │
+│  │ #7aa2f7 │ #bb9af7 │ #73daca │ #9ece6a │ #e0af68 │              │
+│  │  Blue │ Purple│  Cyan │ Green │ Yellow│                         │
+│  └──────┴──────┴──────┴──────┴──────┘                             │
+│  Vibe: Cyberpunk, Neon, Modern                                      │
+│                                                                     │
+│  Dracula                                                            │
+│  ┌──────┬──────┬──────┬──────┬──────┐                             │
+│  │ #bd93f9 │ #8be9fd │ #ff79c6 │ #50fa7b │ #ffb86c │              │
+│  │ Purple│  Cyan │  Pink │ Green │ Orange│                         │
+│  └──────┴──────┴──────┴──────┴──────┘                             │
+│  Vibe: Classic retro, Vampire, Nostalgic                            │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  📚 DOCUMENTATION                                                   │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  README.md          → Start here! Complete index                    │
+│  QUICKSTART.md      → 5-minute setup guide                          │
+│  THEME-README.md    → Full theme documentation                      │
+│  TUI-MODULES.md     → Optional modules & customization              │
+│  DESIGN-GUIDE.md    → Complete rice recommendations                 │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  🔧 OPTIONAL MODULES                                                │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  [UP 3h 24m]        System uptime                                   │
+│  [GIT:main 󰐕2]     Git repository status                          │
+│  [UPD 󰚰 15]        Package updates available                       │
+│                                                                     │
+│  See TUI-MODULES.md for installation & more ideas!                  │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  💡 TIPS                                                            │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  • Click CPU/MEM/DSK to toggle between formats                      │
+│  • Click Clock to toggle between time/date                          │
+│  • Hover over modules for intensified glow                          │
+│  • Edit colors.css to adjust glow intensity (0.2-0.6)               │
+│  • Use JetBrainsMono Nerd Font for best results                     │
+│  • Pair with btop, ranger, calcurse for full TUI experience         │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  🎯 COMPLETE THE RICE                                               │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  Hyprland     → Matching borders & blur (DESIGN-GUIDE.md)          │
+│  Terminal     → Ghostty/Alacritty with same colors                  │
+│  Rofi/Wofi    → Matching launcher theme                             │
+│  Notifications → Mako/Dunst with matching style                     │
+│  GTK          → Dark theme + Papirus icons                          │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║  Made with 💙 for the ricing community                              ║
+║                                                                      ║
+║  Inspiration: Omarchy, r/unixporn, TokyoNight, Dracula              ║
+║                                                                      ║
+║  Share your rice: reddit.com/r/unixporn                             ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│  "The best rice is the one that's uniquely yours"                   │
+│                                                                     │
+│  Now go forth and rice! 🚀                                          │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
