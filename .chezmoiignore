@@ -43,6 +43,7 @@ dot_config/heroic
 dot_config/vesktop/sessionData
 dot_config/clipse/clipboard_history.json
 dot_config/clipse/tmp_files
+dot_config/clipse/clipse.log
 
 # Lock files and state databases
 **/*.lock
