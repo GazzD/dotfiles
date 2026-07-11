@@ -41,6 +41,8 @@ dot_config/chromium
 dot_config/go/telemetry
 dot_config/heroic
 dot_config/vesktop/sessionData
+dot_config/clipse/clipboard_history.json
+dot_config/clipse/tmp_files
 
 # Lock files and state databases
 **/*.lock
