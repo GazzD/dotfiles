@@ -18,7 +18,8 @@ local systemMenu        = walker .. " -m menus:system"
 -- local wallpaperPicker   = walker ..
 --     " -t wallpaper-picker -m menus:wallpapers --width 900 --maxheight 600 --minheight 500"
 -- local wallpaperPicker   = "matuwall --toggle"
-local wallpaperPicker   = "launch-or-focus-tui walt"
+-- local wallpaperPicker   = "launch-or-focus-tui walt"
+local wallpaperPicker   = "waypaper"
 local scriptsFolder     = os.getenv("HOME") .. "/.config/hypr/modules/scripts"
 local screenshot        = scriptsFolder .. "/screenshots.sh"
 
@@ -34,7 +35,7 @@ hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("which launch-walker > /tmp/hypr-path
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + M",
+hl.bind(mainMod .. " + SHIFT + escape",
     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
@@ -91,9 +92,21 @@ end
 --     hl.bind(mainMod .. " + SHIFT + " .. key, function() return smw.move_to_workspace(i) end)
 -- end
 
--- Example special workspace (scratchpad)
+-- Special workspace: scratchpad
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+
+-- Special workspace: music
+hl.bind(mainMod .. " + M", hl.dsp.workspace.toggle_special("music"))
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.window.move({ workspace = "special:music" }))
+
+-- Special workspace: chat (telegram, whatsapp, vesktop/discord)
+hl.bind(mainMod .. " + D", hl.dsp.workspace.toggle_special("chat"))
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "special:chat" }))
+
+-- Special workspace: game
+hl.bind(mainMod .. " + G", hl.dsp.workspace.toggle_special("game"))
+hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.move({ workspace = "special:game" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -130,6 +143,7 @@ hl.bind(mainMod .. "+ PRINT", hl.dsp.exec_cmd(screenshot))
 hl.bind("SUPER + TAB", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
 
 -- Capturar un área seleccionada (equivalente a Flameshot gui)
+hl.bind(mainMod .. "+ PRINT", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | "))
 -- # bind = , Print, exec, grim -g "$(slurp)" - |   --filename -
 -- bind = , Print, exec, $screenshot
 

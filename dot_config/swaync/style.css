@@ -19,7 +19,7 @@
 
 * {
     font-family: "JetBrainsMono NFM SemiBold", monospace;
-    border-radius: 16px;
+    border-radius: 5px;
 }
 
 .control-center .notification-row:focus,

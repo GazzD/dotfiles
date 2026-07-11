@@ -57,4 +57,11 @@
       "critical": 90,
     },
   },
+  "custom/weather": {
+    "format": "{}",
+    "interval": 600, // Update every 10 minutes (600 seconds)
+    "exec": "~/.config/waybar/scripts/weather.sh", // or your dotfiles folder if you use stow
+    "on-click": "launch-or-focus-tui weathr",
+    "return-type": "json",
+  }
 }

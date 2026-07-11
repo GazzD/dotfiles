@@ -27,6 +27,7 @@
   "modules-right": [
     "group/audio",
     "group/connections",
+    "custom/weather",
     "clock",
     "clock#alt",
     "group/tray-group",

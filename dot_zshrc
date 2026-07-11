@@ -152,3 +152,6 @@ esac
 
 # ── SYNTAX HIGHLIGHTING (siempre al final) ──────────────────
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH=$PATH:~/.spicetify
+
+export PATH=$PATH:/home/gazzd/.spicetify

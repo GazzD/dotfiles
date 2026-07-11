@@ -21,8 +21,9 @@
     "format-icons": ["", "", ""],
   },
   "hyprland/window": {
-    "format": "{initialTitle}",
+    "format": "{}",
+    "max-length": 50,
     "separate-outputs": true,
+    "fallback": "Desktop",
   },
 }
-

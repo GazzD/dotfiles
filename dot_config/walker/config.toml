@@ -1,7 +1,7 @@
 force_keyboard_focus = true                                                 # forces keyboard forcus to stay in Walker
 selection_wrap = true                                                       # wrap list if at bottom or top
-theme = "custom"                                                            # theme to use
-additional_theme_location = "~/.config/walker/themes/"                      # where to look for themes (absolute path required for -t flag)
+theme = "tokyo-night"                                                            # theme to use
+# additional_theme_location = "~/.config/walker/themes/"                      # where to look for themes (absolute path required for -t flag)
 hide_action_hints = true                                                    # globally hide the action hints
 
 [placeholders]

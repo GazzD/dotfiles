@@ -259,6 +259,26 @@
   padding: 4px 14px;
 }
 
+#custom-weather {
+  margin: 4px 5px;
+  padding: 6px 12px;
+  background-color: @surface_container;
+  border-radius: 4px;
+  border: 1px solid @secondary;
+  box-shadow: 0 0 8px @glow_cyan;
+  color: @secondary;
+  text-shadow: 0 0 6px @glow_cyan;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 9pt;
+  transition: all 0.3s ease;
+}
+
+#custom-weather:hover {
+  box-shadow: 0 0 12px @glow_cyan;
+  border-color: @secondary_fixed;
+}
+
 #custom-uptime:hover,
 #custom-git:hover,
 #custom-updates:hover,

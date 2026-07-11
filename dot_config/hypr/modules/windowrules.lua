@@ -78,6 +78,19 @@ hl.window_rule({
     center = true
 })
 
+hl.window_rule({
+    name   = "satty",
+    match  = { class = "com.gabm.satty" },
+    float  = true,
+    center = true
+})
+
+hl.window_rule({
+    name   = "waypaper",
+    match  = { class = "waypaper" },
+    float  = true,
+    center = true
+})
 --
 -- Matuwall window rules
 hl.window_rule({
@@ -100,4 +113,39 @@ hl.layer_rule({
 hl.layer_rule({
     match     = { namespace = "matuwall-backdrop" },
     animation = "fade"
+})
+
+-- Auto-send chat apps to special:chat
+hl.window_rule({
+    name      = "telegram-to-special",
+    match     = { class = "org.telegram.desktop" },
+    workspace = "special:chat"
+})
+
+hl.window_rule({
+    name      = "vesktop-to-special",
+    match     = { class = "vesktop" },
+    workspace = "special:chat"
+})
+
+hl.window_rule({
+    name      = "whatsapp-pwa-to-special",
+    match     = { title = "WhatsApp Web" },
+    workspace = "special:chat"
+})
+
+hl.window_rule({
+    name      = "steam-to-special",
+    match     = { class = "steam" },
+    workspace = "special:game"
+})
+
+-- Cyberia screensaver
+hl.window_rule({
+    name         = "cyberia-screensaver",
+    match        = { class = "local.cyberia.screensaver" },
+    float        = true,
+    fullscreen   = true,
+    stay_focused = true,
+    animation    = "none",
 })
