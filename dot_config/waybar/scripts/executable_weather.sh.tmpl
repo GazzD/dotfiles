@@ -34,17 +34,17 @@ DESC=$(echo "$RESPONSE" | jq -r '.weather[0].description')
 ICON_CODE=$(echo "$RESPONSE" | jq -r '.weather[0].icon')
 
 case $ICON_CODE in
-    "01d") ICON="";;  # Clear sky day (sun)
-    "01n") ICON="";;  # Clear sky night (moon)
-    "02d") ICON="";;  # Few clouds day
-    "02n") ICON="";;  # Few clouds night
-    "03d"|"03n") ICON="";;  # Scattered clouds
-    "04d"|"04n") ICON="";;  # Broken clouds
-    "09d"|"09n") ICON="";;  # Shower rain
-    "10d") ICON="";;  # Rain day
-    "10n") ICON="";;  # Rain night
-    "11d"|"11n") ICON="";;  # Thunderstorm
-    "13d"|"13n") ICON="";;  # Snow
+    "01d") ICON="";;  # Clear sky day (sun)
+    "01n") ICON="";;  # Clear sky night (moon)
+    "02d") ICON="";;  # Few clouds day
+    "02n") ICON="";;  # Few clouds night
+    "03d"|"03n") ICON="";;  # Scattered clouds
+    "04d"|"04n") ICON="";;  # Broken clouds
+    "09d"|"09n") ICON="";;  # Shower rain
+    "10d") ICON="";;  # Rain day
+    "10n") ICON="";;  # Rain night
+    "11d"|"11n") ICON="";;  # Thunderstorm
+    "13d"|"13n") ICON="";;  # Snow
     "50d"|"50n") ICON="󰖑";;  # Mist/fog
     *) ICON="󰼯";;      # Default (unknown)
 esac
