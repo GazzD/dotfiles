@@ -1,0 +1,84 @@
+name        = "system"
+name_pretty = "System"
+icon        = "preferences-system"
+fixed_order = true
+
+# ── Apps & Windows ──────────────────────────────────────────
+[[entries]]
+text    = "Applications"
+subtext = "Search and launch apps"
+icon    = "application-x-executable"
+actions = { "open" = "launch-walker -m desktopapplications" }
+
+[[entries]]
+text    = "Windows"
+subtext = "Switch to an open window"
+icon    = "preferences-system-windows"
+actions = { "open" = "launch-walker -m windows" }
+
+# ── Media & Appearance ──────────────────────────────────────
+[[entries]]
+text    = "Wallpapers"
+subtext = "Change desktop background"
+icon    = "image-x-generic"
+actions = { "open" = "launch-walker -t wallpaper-picker -m menus:wallpapers --width 900 --maxheight 600 --minheight 500" }
+
+[[entries]]
+text    = "Color Picker"
+subtext = "Pick a color from the screen (copies hex to clipboard)"
+icon    = "color-picker"
+actions = { "pick" = "sleep 0.3 && wl-copy $(hyprpicker)" }
+
+# ── System & Hardware ────────────────────────────────────────
+[[entries]]
+text    = "Packages"
+subtext = "Search and install Arch packages"
+icon    = "system-software-install"
+actions = { "open" = "launch-walker -m archlinuxpkgs" }
+
+[[entries]]
+text    = "Bluetooth"
+subtext = "Manage bluetooth devices"
+icon    = "bluetooth"
+actions = { "open" = "launch-walker -m bluetooth" }
+
+[[entries]]
+text    = "Audio"
+subtext = "Manage audio output / input devices"
+icon    = "audio-card"
+actions = { "open" = "launch-walker -m wireplumber" }
+
+[[entries]]
+text  = "Volume"
+async = "wpctl get-volume @DEFAULT_AUDIO_SINK@"
+icon  = "audio-volume-high"
+
+[entries.actions]
+"raise"  = "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+"lower"  = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"mute"   = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+
+# ── Session ──────────────────────────────────────────────────
+[[entries]]
+text    = "Lock"
+subtext = "Lock the screen"
+icon    = "system-lock-screen"
+actions = { "lock" = "loginctl lock-session" }
+
+[[entries]]
+text    = "Logout"
+subtext = "End the Hyprland session"
+icon    = "system-log-out"
+actions = { "logout" = "hyprctl dispatch exit" }
+
+[[entries]]
+text    = "Reboot"
+subtext = "Restart the computer"
+icon    = "system-reboot"
+actions = { "reboot" = "systemctl reboot" }
+
+[[entries]]
+text    = "Shutdown"
+subtext = "Power off the computer"
+icon    = "system-shutdown"
+actions = { "shutdown" = "systemctl poweroff" }
