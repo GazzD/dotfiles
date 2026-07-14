@@ -1,5 +1,7 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
+alias dotfiles-sync="$HOME/Projects/dotfiles/scripts/sync.sh"
+
 # overwrite greeting
 # potentially disabling fastfetch
 #function fish_greeting

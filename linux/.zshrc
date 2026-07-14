@@ -150,6 +150,9 @@ case ":${PATH}:" in
 esac
 
 
+# ── DOTFILES SYNC ───────────────────────────────────────────
+alias dotfiles-sync="$HOME/Projects/dotfiles/scripts/sync.sh"
+
 # ── SYNTAX HIGHLIGHTING (siempre al final) ──────────────────
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH=$PATH:~/.spicetify
