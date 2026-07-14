@@ -1,0 +1,58 @@
+{
+  "group/launchers": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 650,
+      "transition-left-to-right": true,
+    },
+    "modules": [
+      "custom/distro",
+      "custom/terminal",
+      "custom/code",
+      "custom/obsidian",
+      "custom/office",
+      "custom/files",
+      "custom/spotify",
+      "custom/browser",
+    ],
+  },
+  "custom/distro": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/terminal": {
+    "format": "󰆍",
+    "on-click": "ghostty",
+    "tooltip": true,
+  },
+  "custom/code": {
+    "format": "",
+    "on-click": "zeditor",
+    "tooltip": false,
+  },
+  "custom/obsidian": {
+    "format": "󰹕",
+    "on-click": "obsidian",
+    "tooltip": false,
+  },
+  "custom/office": {
+    "format": "󰏆",
+    "on-click": "onlyoffice-desktopeditors",
+    "tooltip": false,
+  },
+  "custom/files": {
+    "format": "",
+    "on-click": "thunar",
+    "tooltip": false,
+  },
+  "custom/spotify": {
+    "format": "",
+    "on-click": "spotify",
+    "tooltip": false,
+  },
+  "custom/browser": {
+    "format": "󰖟",
+    "on-click": "zen-browser",
+    "tooltip": false,
+  },
+}

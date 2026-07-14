@@ -1,0 +1,12 @@
+{
+  "group/window": {
+    "orientation": "horizontal",
+    "modules": ["hyprland/window"],
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50,
+    "separate-outputs": true,
+    "fallback": "Desktop",
+  },
+}

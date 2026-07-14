@@ -1,0 +1,16 @@
+@import "../base/colors.css";
+
+/* ======================================
+   Window Module (Active Window Title)
+   ====================================== */
+
+#window {
+  border-color: @tertiary;
+  box-shadow: 0 0 8px @glow_cyan;
+  color: @secondary_fixed_dim;
+}
+
+#window:hover {
+  box-shadow: 0 0 12px @glow_cyan;
+  border-color: @tertiary_fixed;
+}

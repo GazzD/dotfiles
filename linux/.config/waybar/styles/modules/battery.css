@@ -1,0 +1,16 @@
+@import "../base/colors.css";
+
+/* ======================================
+   Battery Module
+   ====================================== */
+
+#battery {
+  padding: 6px 16px;
+  border-color: @tertiary;
+  box-shadow: 0 0 8px @glow_cyan;
+  color: @secondary_fixed_dim;
+}
+
+#battery:hover {
+  box-shadow: 0 0 12px @glow_cyan;
+}

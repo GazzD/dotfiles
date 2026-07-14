@@ -5,5 +5,11 @@ quickshell/
 .zcompdump*
 .zsh_history
 
-# chezmoi-managed paths — do not edit manually
-# (chezmoi add will handle these)
+# Secrets
+secrets/env.sh
+
+# Configs generados desde .example (contienen secrets)
+linux/.gitconfig
+linux/.config/spotify-player/app.toml
+linux/.config/calcurse/caldav/config
+linux/.config/waybar/scripts/weather.sh

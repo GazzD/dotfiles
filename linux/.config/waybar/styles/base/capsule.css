@@ -1,0 +1,51 @@
+@import "colors.css";
+
+/* ======================================
+   Capsule/Pill Pattern - Shared Container Style
+   Applied to all grouped modules
+   ====================================== */
+
+#launchers,
+#power-profiles-daemon,
+#idle_inhibitor,
+#audio,
+#connections,
+#window,
+#workspaces,
+#resources,
+#battery,
+#clock,
+#tray,
+#dev-tools,
+#custom-weather {
+    margin: 0.1rem;
+    padding: 0.15rem 0.4rem;
+    background-color: @surface_container;
+    border-radius: 4px;
+    border: 1px solid @primary;
+    box-shadow: 0 0 10px @glow_blue;
+
+  /*margin: 4px 5px;
+  padding: 2px 5px;
+  background-color: @surface_container;
+  border-radius: 4px;
+  border: 1px solid @outline_variant;*/
+  transition: all 0.3s ease;
+}
+
+/* Hover effects - applies to all capsules */
+#launchers:hover,
+#power-profiles-daemon:hover,
+#idle_inhibitor:hover,
+#audio:hover,
+#network:hover,
+#window:hover,
+#workspaces:hover,
+#resources:hover,
+#battery:hover,
+#clock:hover,
+#tray:hover,
+#dev-tools:hover,
+#custom-weather:hover {
+  border-color: @primary;
+}

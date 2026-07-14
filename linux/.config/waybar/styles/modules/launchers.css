@@ -1,0 +1,99 @@
+@import "../base/colors.css";
+
+/* ======================================
+   Launchers Module (App Launcher Bar)
+   ====================================== */
+
+#launchers {
+  border-color: @primary;
+  box-shadow: 0 0 10px @glow_blue;
+  color: @primary;
+}
+
+#launchers:hover {
+  box-shadow: 0 0 15px @glow_blue;
+  border-color: @primary_bright;
+}
+
+#custom-distro {
+  color: @primary;
+  padding: 6px 15px 6px 10px;
+  text-shadow: 0 0 8px @glow_blue;
+}
+
+#custom-terminal {
+  color: @success;
+  padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_green;
+  transition: all 0.2s ease;
+}
+
+#custom-terminal:hover {
+  text-shadow: 0 0 12px @glow_green;
+}
+
+#custom-code {
+  color: @primary_bright;
+  padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_cyan;
+  transition: all 0.2s ease;
+}
+
+#custom-code:hover {
+  text-shadow: 0 0 12px @glow_cyan;
+}
+
+#custom-office {
+  color: @error;
+  padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_red;
+  transition: all 0.2s ease;
+}
+
+#custom-office:hover {
+  text-shadow: 0 0 12px @glow_red;
+}
+
+#custom-obsidian {
+  color: @secondary;
+  padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_purple;
+  transition: all 0.2s ease;
+}
+
+#custom-obsidian:hover {
+  text-shadow: 0 0 12px @glow_purple;
+}
+
+#custom-files {
+  color: @warning;
+  padding: 0px 10px 0px 8px;
+  text-shadow: 0 0 8px @glow_yellow;
+  transition: all 0.2s ease;
+}
+
+#custom-files:hover {
+  text-shadow: 0 0 12px @glow_yellow;
+}
+
+#custom-spotify {
+  color: @success;
+  padding: 0px 10px;
+  text-shadow: 0 0 8px @glow_green;
+  transition: all 0.2s ease;
+}
+
+#custom-spotify:hover {
+  text-shadow: 0 0 12px @glow_green;
+}
+
+#custom-browser {
+  color: @warning;
+  padding: 0px 15px 0px 10px;
+  text-shadow: 0 0 8px @glow_yellow;
+  transition: all 0.2s ease;
+}
+
+#custom-browser:hover {
+  text-shadow: 0 0 12px @glow_yellow;
+}

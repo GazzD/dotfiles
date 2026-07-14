@@ -1,0 +1,31 @@
+@import "../base/colors.css";
+
+/* ======================================
+   Connections Module (Wi-Fi/Ethernet + Bluetooth)
+   ====================================== */
+/*#bluetooth,
+#network {
+  border-color: @tertiary;
+  box-shadow: 0 0 8px @glow_cyan;
+  color: @secondary_fixed_dim;
+}
+
+#bluetooth:hover,
+#network:hover {
+  box-shadow: 0 0 12px @glow_cyan;
+  border-color: @tertiary_fixed;
+}
+*/
+#network {
+  padding: 0px 10px 0px 4px;
+}
+
+#bluetooth {
+  margin-right: 2px;
+  font-size: 16px;
+  padding: 0 8px;
+}
+
+#connections {
+  color: @secondary_fixed_dim;
+}

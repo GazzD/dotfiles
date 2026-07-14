@@ -1,0 +1,16 @@
+/* ======================================
+   Global Reset & Base Styles
+   ====================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  min-height: 0px;
+  border: none;
+  border-radius: 0;
+  font-family: "Inter", "JetBrainsMono Nerd Font";
+}
+
+window#waybar {
+  background: transparent;
+}

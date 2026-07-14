@@ -1,0 +1,67 @@
+@import "colors.css";
+
+/* ======================================
+   State Colors - TUI Retro Hacker Style
+   ====================================== */
+
+/* Success/Good states */
+#custom-tray-arrow.inhibited-none,
+#custom-tray-arrow.dnd-none,
+#battery.charging,
+#power-profiles-daemon.power-saver {
+  color: @success;
+  text-shadow: 0 0 8px rgba(158, 206, 106, 0.4);
+}
+
+/* Warning states */
+#idle_inhibitor.activated,
+#cpu.warning,
+#disk.warning,
+#memory.warning,
+#battery.warning:not(.charging),
+#custom-tray-arrow.notification,
+#custom-tray-arrow.dnd-notification,
+#custom-tray-arrow.inhibited-notification {
+  color: @warning;
+  text-shadow: 0 0 8px rgba(224, 175, 104, 0.4);
+  /* animation: warning-pulse 2s ease-in-out infinite; */
+}
+
+/* Critical/Error states */
+#network.disabled,
+#cpu.critical,
+#disk.critical,
+#memory.critical,
+#temperature.critical,
+#battery.critical:not(.charging),
+#power-profiles-daemon.performance,
+#custom-tray-arrow.dnd-inhibited-none,
+#custom-tray-arrow.dnd-inhibited-notification {
+  color: @error;
+  text-shadow: 0 0 8px rgba(247, 118, 142, 0.4);
+  /* animation: critical-blink 1s ease-in-out infinite; */
+}
+
+/* Animations disabled temporarily due to GTK CSS parser issues
+@keyframes warning-pulse {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(224, 175, 104, 0.4);
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(224, 175, 104, 0.4);
+    opacity: 0.8;
+  }
+}
+
+@keyframes critical-blink {
+  0%, 49% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(247, 118, 142, 0.4);
+  }
+  50%, 100% {
+    opacity: 0.5;
+    text-shadow: 0 0 4px rgba(247, 118, 142, 0.4);
+  }
+}
+*/

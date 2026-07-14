@@ -1,0 +1,19 @@
+@import "../base/colors.css";
+
+/* ======================================
+   Power Module (Power Profiles + Idle Inhibitor)
+   ====================================== */
+
+#power-profiles-daemon,
+#idle_inhibitor {
+  padding: 6px 15px 6px 10px;
+  border-color: @secondary;
+  box-shadow: 0 0 8px @glow_purple;
+  color: @secondary_fixed_dim;
+}
+
+#power-profiles-daemon:hover,
+#idle_inhibitor:hover {
+  box-shadow: 0 0 12px @glow_purple;
+  border-color: @secondary;
+}

@@ -1,0 +1,62 @@
+@import "../base/colors.css";
+
+/* ======================================
+   Dev Tools Module (Uptime, Git, Updates, Reload)
+   ====================================== */
+
+#dev-tools {
+  border-color: @secondary;
+  box-shadow: 0 0 8px @glow_purple;
+}
+
+#dev-tools:hover {
+  box-shadow: 0 0 12px @glow_purple;
+}
+
+#custom-uptime,
+#custom-git,
+#custom-updates,
+#custom-reload-waybar {
+  margin: 0;
+  padding: 6px 12px;
+  color: @on_surface;
+  transition: all 0.3s ease;
+}
+
+#custom-uptime {
+  color: @secondary;
+  text-shadow: 0 0 6px @glow_purple;
+}
+
+#custom-git {
+  color: @warning;
+  text-shadow: 0 0 6px @glow_yellow;
+}
+
+#custom-updates {
+  color: @primary;
+  text-shadow: 0 0 6px @glow_blue;
+}
+
+#custom-reload-waybar {
+  color: @primary_bright;
+  text-shadow: 0 0 6px @glow_cyan;
+  font-size: 12pt;
+  padding: 4px 14px;
+}
+
+#custom-uptime:hover {
+  text-shadow: 0 0 10px @glow_purple;
+}
+
+#custom-git:hover {
+  text-shadow: 0 0 10px @glow_yellow;
+}
+
+#custom-updates:hover {
+  text-shadow: 0 0 10px @glow_blue;
+}
+
+#custom-reload-waybar:hover {
+  text-shadow: 0 0 10px @glow_cyan;
+}

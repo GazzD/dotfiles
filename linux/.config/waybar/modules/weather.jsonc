@@ -1,0 +1,9 @@
+{
+  "custom/weather": {
+    "format": "{}",
+    "interval": 600,
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "on-click": "launch-or-focus-tui weathr",
+    "return-type": "json",
+  },
+}

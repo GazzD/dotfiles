@@ -1,0 +1,24 @@
+/* ======================================
+   Waybar Style Entry Point
+   ====================================== */
+
+/* Base styles */
+@import "styles/base/reset.css";
+@import "styles/base/colors.css";
+@import "styles/base/capsule.css";
+@import "styles/base/typography.css";
+@import "styles/base/states.css";
+
+/* Module-specific styles */
+@import "styles/modules/launchers.css";
+@import "styles/modules/workspaces.css";
+@import "styles/modules/window.css";
+@import "styles/modules/resources.css";
+@import "styles/modules/audio.css";
+@import "styles/modules/connections.css";
+@import "styles/modules/battery.css";
+@import "styles/modules/clock.css";
+@import "styles/modules/weather.css";
+@import "styles/modules/power.css";
+@import "styles/modules/tray.css";
+@import "styles/modules/dev-tools.css";

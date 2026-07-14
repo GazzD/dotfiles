@@ -1,0 +1,12 @@
+@import "colors.css";
+
+/* ======================================
+   Typography - Shared Font Styles
+   ====================================== */
+
+/* Monospace metrics style (TUI-like modules) */
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 10pt;
+}

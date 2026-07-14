@@ -1,0 +1,17 @@
+@import "../base/colors.css";
+
+/* ======================================
+   Clock Module
+   ====================================== */
+
+#clock {
+  padding: 6px 10px 6px 16px;
+  border-color: @primary;
+  box-shadow: 0 0 8px @glow_blue;
+  color: @secondary_fixed_dim;
+}
+
+#clock:hover {
+  box-shadow: 0 0 12px @glow_blue;
+  color: @primary;
+}

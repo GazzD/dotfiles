@@ -1,0 +1,30 @@
+@import "../base/colors.css";
+
+/* ======================================
+   Tray Module (Notification Arrow + System Tray)
+   ====================================== */
+
+#tray {
+  border-color: @primary;
+  box-shadow: 0 0 8px @glow_blue;
+}
+
+#tray:hover {
+  box-shadow: 0 0 12px @glow_blue;
+}
+
+#custom-tray-arrow {
+  padding: 6px 14px 6px 10px;
+  color: @primary;
+  text-shadow: 0 0 8px @glow_blue;
+}
+
+#tray {
+  padding: 6px 10px;
+}
+
+#tray > .passive,
+#tray > .active,
+#tray > .needs-attention {
+  -gtk-icon-effect: none;
+}

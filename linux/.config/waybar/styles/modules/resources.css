@@ -1,0 +1,40 @@
+@import "../base/colors.css";
+
+/* ======================================
+   Resources Module (CPU, Memory, Disk, Temperature)
+   ====================================== */
+
+#resources {
+  border-color: @tertiary;
+  box-shadow: 0 0 8px @glow_cyan;
+  color: @secondary_fixed_dim;
+}
+
+#resources:hover {
+  box-shadow: 0 0 12px @glow_cyan;
+  border-color: @tertiary_fixed;
+}
+
+#disk,
+#memory,
+#cpu,
+#temperature {
+  margin-right: 2px;
+  padding: 0 8px;
+}
+
+#cpu {
+  color: @primary;
+}
+
+#temperature {
+  color: @warning;
+}
+
+#memory {
+  color: @tertiary;
+}
+
+#disk {
+  color: @secondary;
+}

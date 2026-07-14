@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+WALL=$(awww query | sed -n 's/.*image: //p; q')
+
+ln -sf "$WALL" "$HOME/Pictures/Wallpapers/current"
+
+hyprlock
