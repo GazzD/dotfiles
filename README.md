@@ -2,7 +2,7 @@
 <h3 align="center">Arch Linux + Hyprland | Windows 11</h3>
 
 <p align="center">
-  Personal dotfiles managed with <a href="https://www.chezmoi.io/">chezmoi</a>.
+  Personal dotfiles managed with <a href="https://www.gnu.org/software/stow/">GNU Stow</a>.
 </p>
 
 ---
@@ -12,18 +12,30 @@
 **Linux (Arch + Hyprland)**
 
 - `hypr` — Hyprland, hypridle, hyprlock
-- `ghostty` — terminal
-- `fastfetch`
 - `waybar` — status bar
+- `walker` + `elephant` — app launcher & backend
 - `swaync` — notification center
-- `walker` — app launcher
-- `matugen` — color generation
+- `ghostty` — terminal
 - `fish` — shell
-- `lazygit`
+- `zsh` — shell
 - `starship` — shell prompt
-- `zed` — editor
+- `gtk-3.0` / `gtk-4.0` — theme & appearance
+- `fontconfig` — font rendering
+- `matugen` — color generation
+- `waypaper` — wallpaper manager
+- `fastfetch` — system info
+- `btop` — system monitor
 - `Thunar` — file manager
-- `zsh`
+- `spicetify` — Spotify theme
+- `zed` / `micro` — editors
+- `lazygit` — git TUI
+- `spotify-player` — Spotify TUI client
+- `clipse` — clipboard manager
+- `calcurse` — calendar
+- `weathr` — weather CLI
+- `mise` — runtime/package manager
+- `xdg-desktop-portal` — desktop portal (Hyprland)
+- `nvim` / `helix` — (ready for future config)
 
 **Windows**
 
@@ -37,79 +49,86 @@
 
 ```
 dotfiles/
-├── .chezmoi.toml.tmpl      # chezmoi config template (per-machine variables)
-├── .chezmoiignore          # OS-specific exclusion rules
-├── .chezmoitemplates/      # reusable Go templates (e.g. monitor layouts)
-├── dot_config/             # maps to ~/.config/
-│   ├── hypr/
-│   ├── ghostty/
-│   ├── fastfetch/
-│   ├── waybar/
-│   ├── swaync/
-│   ├── walker/
-│   ├── matugen/
-│   ├── fish/
-│   ├── lazygit/
-│   ├── starship.toml
-│   ├── zed/
-│   └── Thunar/
-├── dot_zshrc               # maps to ~/.zshrc
-└── windows/                # Windows configs (applied only on Windows)
-    └── dot_config/
-        ├── fastfetch/
-        ├── komorebi/
-        ├── yasb/
-        ├── wezterm/
-        └── powershell/
+├── linux/               # stow linux/ -t ~   (on Linux)
+│   ├── .config/
+│   │   ├── hypr/
+│   │   ├── waybar/
+│   │   ├── gtk-3.0/
+│   │   ├── gtk-4.0/
+│   │   ├── fish/
+│   │   ├── elephant/
+│   │   ├── fontconfig/
+│   │   └── …
+│   ├── .zshrc
+│   └── .gitconfig        # (gitignored — generated from .example)
+├── windows/              # stow windows/ -t ~ (on Windows)
+│   └── .config/
+│       ├── komorebi/
+│       ├── yasb/
+│       ├── wezterm/
+│       └── …
+├── secrets/
+│   ├── env.sh             # (gitignored — your actual API keys)
+│   └── env.sh.example     # template with empty vars
+├── scripts/
+│   └── deploy.sh          # envsubst + stow
+└── .gitignore
 ```
 
 ## Installation
 
 ### Prerequisites
 
-Install [chezmoi](https://www.chezmoi.io/install/):
-
 ```bash
 # Arch Linux
-sudo pacman -S chezmoi
-
-# Windows (winget)
-winget install twpayne.chezmoi
+sudo pacman -S stow gettext
 ```
 
-### Apply dotfiles
+### First-time setup
 
 ```bash
-chezmoi init --apply https://github.com/GazzD/dotfiles.git
+git clone https://github.com/GazzD/dotfiles.git ~/Projects/dotfiles
+cd ~/Projects/dotfiles
+
+# Set up secrets
+cp secrets/env.sh.example secrets/env.sh
+# Edit secrets/env.sh and fill in your API keys / tokens
+
+# Deploy
+./scripts/deploy.sh
 ```
 
-chezmoi will prompt for any machine-specific variables (email, monitor layout) on first run.
-
-### Add a new config file
+### Deploy (after updates)
 
 ```bash
-chezmoi add ~/.config/someapp
-chezmoi cd          # opens source dir in $EDITOR
-chezmoi apply       # deploy changes to $HOME
+cd ~/Projects/dotfiles
+git pull
+./scripts/deploy.sh
 ```
 
-### Edit an existing file
+## Secrets
+
+Some config files contain API keys or tokens. These are **excluded from git** via `.gitignore` and generated at deploy time from `.example` files using `envsubst`:
+
+| File | What it needs |
+|------|--------------|
+| `secrets/env.sh` | Google Calendar OAuth, Spotify client ID, OpenWeatherMap key, git email/name |
+| `linux/.gitconfig` | `$GIT_EMAIL`, `$GIT_NAME` |
+| `linux/.config/spotify-player/app.toml` | `$SPOTIFY_CLIENT_ID` |
+| `linux/.config/calcurse/caldav/config` | `$GOOGLE_CALENDAR_CLIENT_ID`, `$GOOGLE_CALENDAR_CLIENT_SECRET` |
+| `linux/.config/waybar/scripts/weather.sh` | `$OPENWEATHERMAP_API_KEY`, `$WEATHER_LATITUDE`, `$WEATHER_LONGITUDE` |
+
+### Add a new config
 
 ```bash
-chezmoi edit ~/.config/someapp/config
-chezmoi apply
-```
-
-### Sync changes back to source
-
-```bash
-chezmoi re-add      # pull any manual edits back into source dir
-chezmoi diff        # preview what chezmoi apply would change
+cp -r ~/.config/<app> linux/.config/<app>
+git add linux/.config/<app>
+git commit -m "Add <app> config"
+./scripts/deploy.sh
 ```
 
 ## Notes
 
-- Machine-specific settings (monitor layout, etc.) live in `.chezmoi.toml.tmpl` and are stored per-machine in `~/.config/chezmoi/chezmoi.toml` — not committed.
-- `lazy-lock.json` is intentionally excluded; each machine resolves the latest plugin versions.
-- Windows configs are deployed to `~/.config/` (`C:\Users\<user>\.config\`). Apps that require a different path need a manual symlink from their expected location to `~/.config/<app>`.
-- The old GNU Stow setup is preserved in the `archive/stow-era` branch.
+- Linux and Windows configs are in separate stow packages (`linux/` and `windows/`). Run the appropriate one for your OS.
+- `nvim/` and `helix/` are placeholder directories ready for future config.
+- Secrets are stored locally in `secrets/env.sh` — never committed.
